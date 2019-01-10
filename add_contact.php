@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
   include('config.php');
@@ -30,6 +31,8 @@
 ?>
 
 
+=======
+>>>>>>> b49208c9807657788e786f2b71f38ceb54465597
 <html>
 <head>
 <title>add_contact</title>
@@ -45,12 +48,23 @@
 			</button>
 		<div class="collapse navbar-collapse" id="navbarText">
 		    <ul class="navbar-nav mr-auto">
+<<<<<<< HEAD
 			<li class="nav-item active">
 		        <a class="nav-link fa fa-home" href="index.php" style="font-size:20px">Home & More<span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item active">
 		        <a class="nav-link fa fa-user-plus" style="font-size:20px"> Adding Contacts<span class="sr-only">(current)</span></a>
 		      </li>
+=======
+		      <li class="nav-item active">
+		        <a class="nav-link fa fa-list" href="index.html" style="font-size:20px"> Contact List<span class="sr-only">(current)</span></a>
+		      </li>
+			  <li class="nav-item active">
+		        <a class="nav-link fa fa-user-plus" href="add_contact.html" style="font-size:20px"> Add Contacts<span class="sr-only">(current)</span></a>
+		      </li>
+			 
+
+>>>>>>> b49208c9807657788e786f2b71f38ceb54465597
 			<div class="btn-group" style="margin-left:680px">
 				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:18px; font-family:Copperplate Gothic Bold">
 					Logout
@@ -84,7 +98,11 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
 		<input class="btn btn-info" type="submit" name ="add_contact" id="add_btn" value="Add Contact"/>
+=======
+		<button type="submit" class="btn btn-info" style="margin: "center">Add Contact</button>
+>>>>>>> b49208c9807657788e786f2b71f38ceb54465597
 	</form>
 	</div>
 </div>
