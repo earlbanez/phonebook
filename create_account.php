@@ -1,3 +1,6 @@
+<?php
+     include('server.php');        
+?>
 <html>
 <head>
 <title>Create Account</title>
@@ -7,7 +10,7 @@
     <div class="loginbox">
     <img src="acca.png" class="avas">
         <h1>Sign Up Here</h1>
-        <form action="code.php" method="post">
+        <form action="server.php" method="post">
             <input type="text"  name="uname" placeholder="Username" required autofocus>
             <input type="password" name="password" placeholder="Password" required>
 			<input type="password" name="cpassword" placeholder="Verify Password" required> 
