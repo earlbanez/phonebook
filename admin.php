@@ -1,6 +1,11 @@
 <?php
+<<<<<<< HEAD
 session_start();
 
+=======
+
+session_start();
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 $host = '';
 $db ='';
 
@@ -19,7 +24,11 @@ $purpose="";
 $date="";
 $amount="";
 $cedula_id="";
+<<<<<<< HEAD
 $id="";
+=======
+$staff_id="";
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 $captain_id="";
 
 
@@ -37,10 +46,17 @@ if(isset($_POST['save'])){
 	$date = $_POST['date'];
 	$amount = $_POST['amount'];
 	$cedula_id = $_POST['cedula_id'];
+<<<<<<< HEAD
 	$id = $_POST['id'];
 	$captain_id = $_POST['captain_id'];
 
 	$mysqli->query("INSERT INTO admin (clearance_id,or_number,person_number,first_name,middle_initial,last_name,barangay_id,purpose,date,amount,cedula_id,id,captain_id) VALUES ('$clearance_id','$or_number','$person_number','$first_name','$middle_initial','$last_name','$barangay_id','$purpose','$date','$amount','$cedula_id','$id','$captain_id')") or
+=======
+	$staff_id = $_POST['staff_id'];
+	$captain_id = $_POST['captain_id'];
+
+	$mysqli->query("INSERT INTO admin (person_number,first_name,middle_initial,last_name,barangay_id,purpose,date,amount,cedula_id,staff_id,captain_id) VALUES ('$person_number','$first_name','$middle_initial','$last_name','$barangay_id','$purpose','$date','$amount','$cedula_id','$staff_id','$captain_id')") or
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 			die($mysqli->error);
 	$_SESSION['message'] = "Successfully Added!";
 	$_SESSION['msg_type'] = "success";
@@ -83,7 +99,11 @@ if(isset($_GET['edit'])){
 		$date = $row['date'];
 		$amount = $row['amount'];
 		$cedula_id = $row['cedula_id'];
+<<<<<<< HEAD
 		$id = $row['id'];
+=======
+		$staff_id = $row['staff_id'];
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		$captain_id = $row['captain_id'];
 		
 	}
@@ -101,10 +121,17 @@ if(isset($_POST['update_person'])){
 	$date = $_POST['date'];
 	$amount = $_POST['amount'];
 	$cedula_id = $_POST['cedula_id'];
+<<<<<<< HEAD
 	$id = $_POST['id'];
 	$captain_id = $_POST['captain_id'];
 	
 	$mysqli->query("UPDATE admin SET clearance_id='$clearance_id',or_number='$or_number',person_number='$person_number',first_name='$first_name',middle_initial='$middle_initial',last_name='$last_name',barangay_id='$barangay_id',purpose='$purpose',date='$date',amount='$amount',cedula_id='$cedula_id',id='$id',captain_id='$captain_id' WHERE clearance_id=$id") or die($mysqli->error);
+=======
+	$staff_id = $_POST['staff_id'];
+	$captain_id = $_POST['captain_id'];
+	
+	$mysqli->query("UPDATE admin SET person_number='$person_number',first_name='$first_name',middle_initial='$middle_initial',last_name='$last_name',barangay_id='$barangay_id',purpose='$purpose',date='$date',amount='$amount',cedula_id='$cedula_id',staff_id='$staff_id',captain_id='$captain_id' WHERE clearance_id=$id") or die($mysqli->error);
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 	$_SESSION['message'] = "Successfully Update!";
 	$_SESSION['msg_type'] = "warning";
 	

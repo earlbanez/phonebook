@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 session_start();
+=======
+
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 $host = '';
 $db ='';
 
@@ -18,10 +22,17 @@ if(isset($_POST['save'])){
 	$first_name = $_POST['first_name'];
 	$middle_name = $_POST['middle_name'];
 	$last_name = $_POST['last_name'];
+<<<<<<< HEAD
 	$barangay_id = $_POST['barangay'];
 	
 
 	$mysqli->query("INSERT INTO captain (captain_id,first_name,middle_name,last_name, barangay_id) VALUES ('$id_number','$first_name','$middle_name','$last_name','$barangay_id')") or
+=======
+
+	
+
+	$mysqli->query("INSERT INTO captain (captain_id,first_name,middle_name,last_name) VALUES ('$id_number','$first_name','$middle_name','$last_name')") or
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 			die($mysqli->error);
 	$_SESSION['message'] = "Successfully Added!";
 	$_SESSION['msg_type'] = "success";

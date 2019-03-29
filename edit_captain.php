@@ -38,7 +38,10 @@ include('captain.php');
 			<br><label>Last Name</label></br>
 			<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="<?php echo $last_name;?>" required>
 		</div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		  <br><br>
 		<div class="form-group">
 		<?php 

@@ -6,7 +6,11 @@ include('person.php');
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<title>ClearanceCityWide</title>
+=======
+	<title>Laboratory Exam</title>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 
 </head>
 <body>
@@ -22,7 +26,11 @@ include('person.php');
 	<form action="person.php" method="POST">
 	<input type="hidden" name="id" value="<?php echo $id; ?>">
 		<div class="form-group">
+<<<<<<< HEAD
 			<br><label>Person ID</label></br>
+=======
+			<br><label>Student ID</label></br>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 			<input type="text" name="person_number" placeholder="Person ID" class="form-control" value="<?php echo $person_number;?>" required>
 		</div>
 		
@@ -51,6 +59,21 @@ include('person.php');
 			<br><label>Birthday</label></br>
 			<input type="date" name="birthday" placeholder="Birthday" class="form-control" value="<?php echo $birthday;?>" required>
 		</div>
+<<<<<<< HEAD
+=======
+		<div class="form-group">
+			<br><label>Barangay ID</label></br>
+			<input type="text" name="barangay_id" placeholder="Barangay ID" class="form-control" value="<?php echo $barangay_id;?>" required>
+		</div>
+		<div class="form-group">
+			<br><label>Captain ID</label></br>
+			<input type="text" name="captain_id" placeholder="Captain ID" class="form-control" value="<?php echo $captain_id;?>" required>
+		</div>
+		<div class="form-group">
+			<br><label>Staff ID</label></br>
+			<input type="text" name="staff_id" placeholder="Staff ID" class="form-control" value="<?php echo $staff_id;?>" required>
+		</div>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		  <br><br>
 		<div class="form-group">
 		<?php 

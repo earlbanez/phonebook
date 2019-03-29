@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 session_start();
 $host = '';
 $db ='';
@@ -11,15 +15,27 @@ $last_name="";
 $middle_initial="";
 $status="";
 $birthday="";
+<<<<<<< HEAD
 
 
 if(isset($_POST['save'])){
 
+=======
+$barangay_id="";
+$captain_id="";
+$staff_id="";
+
+
+
+if(isset($_POST['save'])){
+	$person_number = $_POST['person_number'];
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 	$first_name = $_POST['first_name'];
 	$last_name = $_POST['last_name'];
 	$middle_initial = $_POST['middle_initial'];
 	$status = $_POST['status'];
 	$birthday = $_POST['birthday'];
+<<<<<<< HEAD
 	$staff_id = $_SESSION['staff_id'];
 	
 	$result1 = $mysqli->query("SELECT .barangay.barangay_id From staff,barangay where staff_id='$staff_id' AND staff.barangay_id = barangay.barangay_id ") or die($mysqli->error);
@@ -32,6 +48,21 @@ if(isset($_POST['save'])){
 			$_SESSION['msg_type'] = "success";
 		header("location:index.php");
 	}
+=======
+	$barangay_id = $_POST['barangay_id'];
+	$captain_id = $_POST['captain_id'];
+	$staff_id = $_POST['staff_id'];
+	
+	
+
+	$mysqli->query("INSERT INTO person (person_number,first_name,last_name,middle_initial,status,birthday,barangay_id,captain_id,staff_id) VALUES ('$person_number','$first_name','$last_name','$middle_initial','$status','$birthday','$barangay_id','$captain_id','$staff_id')") or
+			die($mysqli->error);
+	$_SESSION['message'] = "Successfully Added!";
+	$_SESSION['msg_type'] = "success";
+	
+	
+	header("location:index.php");
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 }
 if(isset($_GET['delete'])){
 	$id =$_GET['delete'];
@@ -54,7 +85,11 @@ if(isset($_GET['delete'])){
 if(isset($_GET['edit'])){
 	$id = $_GET['edit'];
 	$update =true;
+<<<<<<< HEAD
 	$result = $mysqli->query("SELECT * From person where person_number=$id") or die($mysqli->error);
+=======
+	$result = $mysqli->query("SELECT * FROM person WHERE person_number=$id") or die($mysqli->error);
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 	if(@count($result)==1){
 		$row=$result->fetch_array();
 		$person_number = $row['person_number'];
@@ -63,7 +98,14 @@ if(isset($_GET['edit'])){
 		$middle_initial = $row['middle_initial'];
 		$status = $row['status'];
 		$birthday = $row['birthday'];
+<<<<<<< HEAD
 
+=======
+		$barangay_id = $row['barangay_id'];
+		$captain_id = $row['captain_id'];
+		$staff_id = $row['staff_id'];
+		
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		
 	}
 }
@@ -75,10 +117,19 @@ if(isset($_POST['update_person'])){
 	$middle_initial = $_POST['middle_initial'];
 	$status = $_POST['status'];
 	$birthday = $_POST['birthday'];
+<<<<<<< HEAD
 
 
 	
 	$mysqli->query("UPDATE person SET person_number='$person_number',first_name='$first_name',last_name='$last_name',middle_initial='$middle_initial',status='$status',birthday='$birthday' WHERE person_number=$id") or die($mysqli->error);
+=======
+	$barangay_id = $_POST['barangay_id'];
+	$captain_id = $_POST['captain_id'];
+	$staff_id = $_POST['staff_id'];
+	
+	
+	$mysqli->query("UPDATE person SET person_number='$person_number',first_name='$first_name',last_name='$last_name',middle_initial='$middle_initial',status='$status',birthday='$birthday',barangay_id='$barangay_id',captain_id='$captain_id',staff_id='$staff_id' WHERE person_number=$id") or die($mysqli->error);
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 	$_SESSION['message'] = "Successfully Update!";
 	$_SESSION['msg_type'] = "warning";
 	

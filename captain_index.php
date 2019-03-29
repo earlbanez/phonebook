@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 	<title>ClearanceCityWide</title>
 	<link rel = "stylesheet" href = "bootstrap/css/bootstrap.min.css">
 	<link rel = "stylesheet" href = "font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">	
@@ -10,6 +11,13 @@
 <body>
 	<nav class="navbar navbar-expand-lg  bg-light">
 		    <ul class="navbar-nav mr-auto">
+=======
+	<title>Laboratory Exam</title>
+	
+</head>
+<body>
+
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
    
 		 
 
@@ -32,6 +40,7 @@
 	<div class="container">
 	<?php
 		
+<<<<<<< HEAD
 		$result = $mysqli->query("SELECT captain_id, first_name, middle_name, last_name,barangay.barangay_id, barangay.barangay_name as barangay From captain, barangay WHERE barangay.barangay_id = captain.barangay_id") or die($mysqli->error);
 
 		
@@ -54,25 +63,52 @@
 				<th scope="col"><a style="margin:center; font-family:Bodoni MT"> Last Name</th></a>
 				<th scope="col"><a style="margin:center; font-family:Bodoni MT"> Barangay</th></a>
 				<th scope="col"><a style="margin:center; font-family:Bodoni MT"> Action</th></a>
+=======
+		$result = $mysqli->query("SELECT * FROM captain") or die($mysqli->error);
+
+		
+		?>
+		<h1>List of Captain</h1>
+		<div class="row justify-content-center">
+			<table class="table">
+			
+				  <tr>
+				<th scope="col">Captain ID</th> 
+				<th scope="col"> |First Name</th>
+		        <th scope="col"> |Middle Name</th>
+				<th scope="col"> |Last Name</th>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 				</tr>
 				<?php
 					while($row=$result->fetch_assoc()):?>
 
 						<tr>
+<<<<<<< HEAD
 							<td><a style="margin:center; font-family:Bodoni MT"><?php echo $row['captain_id']?></td></a>
 							<td><a style="margin:center; font-family:Bodoni MT"><?php echo $row['first_name']?></td></a>
 							<td><a style="margin:center; font-family:Bodoni MT"><?php echo $row['middle_name']?></td></a>
 							<td><a style="margin:center; font-family:Bodoni MT"><?php echo $row['last_name']?></td></a>
 							<td><a style="margin:center; font-family:Bodoni MT"><?php echo $row['barangay']?></td></a>
 
+=======
+							<td><?php echo $row['captain_id']?></td>
+							<td><?php echo $row['first_name']?></td>
+							<td><?php echo $row['middle_name']?></td>
+							<td><?php echo $row['last_name']?></td>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 
 							<td>
 								
 								<a href="edit_captain.php?edit=<?php echo $row['captain_id'];?>"
+<<<<<<< HEAD
 									 class="btn btn-secondary" "a style=font-family:Bodoni MT">Edit</a>
 								<a href="captain.php?delete=<?php echo $row['captain_id'];?>"
 								onclick="return confirm('Are you sure do you want to delete?'); "
 									class="btn btn-danger" "a style=font-family:Bodoni MT">Delete</a>
+=======
+									class="btn btn-danger">Edit</a>
+								<a href="captain.php?delete=<?php echo $row['captain_id'];?>"onclick="return confirm('Are you sure do you want to delete?');r">|Delete</a>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 									
 							</td>
 						</tr>
@@ -87,6 +123,14 @@
 		}
 	
 	?>
+<<<<<<< HEAD
 	
+=======
+	<a style="margin-left:750px; font-family:Copperplate Gothic Bold" href="index.php">Home</button></a>
+	<a style="font-family:Copperplate Gothic Bold" href="add_captain.php"> |Add Captain</button></a>
+	
+</div>
+
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 </body>
 </html>

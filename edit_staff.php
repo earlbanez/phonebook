@@ -22,17 +22,30 @@ include('staff.php');
 	<form action="staff.php" method="POST">
 	<input type="hidden" name="id" value="<?php echo $id; ?>">
 		<div class="form-group">
+<<<<<<< HEAD
+=======
+			<br><label>Staff ID</label></br>
+			<input type="text" name="staff_id" placeholder="Staff ID" class="form-control" value="<?php echo $staff_id;?>" required>
+		</div>
+		
+		<div class="form-group">
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 			<br><label>First Name</label></br>
 			<input type="text" name="first_name" placeholder="First Name" class="form-control" value="<?php echo $first_name;?>" required>
 		</div>
 		<div class="form-group">
 			<br><label>Middle Name</label></br>
+<<<<<<< HEAD
 			<input type="text" name="middle_name" placeholder="Middle Name" class="form-control" value="<?php echo $middle_name;?>">
+=======
+			<input type="text" name="middle_name" placeholder="Middle Name" class="form-control" value="<?php echo $middle_name;?>" required>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		</div>
 		<div class="form-group">
 			<br><label>Last Name</label></br>
 			<input type="text" name="last_name" placeholder="Last Name" class="form-control" value="<?php echo $last_name;?>" required>
 		</div>
+<<<<<<< HEAD
 		<div class="form-group">
 			<br><label>Username</label></br>
 			<input type="text" name="username" placeholder="Username" class="form-control" value="<?php echo $username;?>" required>
@@ -65,6 +78,8 @@ $result = mysqli_query($db, $query);
 		        }
 		        ?>
 		            </select>
+=======
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		  <br><br>
 		<div class="form-group">
 		<?php 

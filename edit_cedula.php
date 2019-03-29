@@ -34,6 +34,13 @@ include('cedula.php');
 			<br><label>Amount</label></br>
 			<input type="text" name="amount" placeholder="Amount" class="form-control" value="<?php echo $amount;?>" required>
 		</div>
+<<<<<<< HEAD
+=======
+		<div class="form-group">
+			<br><label>Place</label></br>
+			<input type="text" name="place" placeholder="Place" class="form-control" value="<?php echo $place;?>" required>
+		</div>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 		  <br><br>
 		<div class="form-group">
 		<?php 

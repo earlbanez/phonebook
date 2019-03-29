@@ -1,7 +1,13 @@
 <?php
+<<<<<<< HEAD
      include('server.php');       
 ?>
 <!DOCTYPE html>
+=======
+     include('server.php');        
+?>
+<html>
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 <head>
 <title>Create Account</title>
 <style>
@@ -69,6 +75,7 @@ body{
 </style>
 </head>
 <body>
+<<<<<<< HEAD
 
         <form class="box" action="server.php" method="POST">
         <h1>Put your Name</h1>
@@ -104,6 +111,15 @@ $result = mysqli_query($db, $query);
 		            </select>
 
             <input type="text" name="position" placeholder="Position" required>
+=======
+    <div class="loginbox">
+    <img src="acca.png" class="avas">
+        <h1>Sign Up Here</h1>
+        <form action="server.php" method="post">
+            <input type="text"  name="uname" placeholder="Username" required autofocus>
+            <input type="password" name="password" placeholder="Password" required>
+			<input type="password" name="cpassword" placeholder="Verify Password" required> 
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 			<input type="submit" name="submit" value="Create Account" class="button">
         </form>
         

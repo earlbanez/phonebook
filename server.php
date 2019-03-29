@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 		session_start();
 
 		$errors = array();
@@ -57,18 +58,96 @@
 	
 	
 	
+=======
+    session_start();
+	$username = "";
+	$errors = array();
+	$password="";
+	$cpassword="";
+	
+	
+	
+	$db = mysqli_connect('localhost', 'root', '', 'ClearanceCityWide');
+	
+	if (isset($_POST['submit'])) {
+		$username = mysqli_real_escape_string($db,$_POST['uname']);
+		$password = mysqli_real_escape_string($db,$_POST['password']);
+		$cpassword = mysqli_real_escape_string($db,$_POST['cpassword']);	
+	
+	
+	
+	if (empty($username)){
+		array_push($errors, "Username is required");
+	}
+	if (empty($password)){
+		array_push($errors, "Password is required");
+	}
+	if ($cpassword != $cpassword){
+		array_push($errors, "Password are not match!");
+	}
+	
+	
+	if (count($errors) == 0) {
+		$password = md5($password); 
+		$sql = "INSERT INTO account (`ID`, username, password)
+					VALUES (null, '$username', '$password')";
+		mysqli_query($db, $sql);
+		$_SESSION['username'] = $username;
+		$_SESSION['success'] = "Successfuly Logged in!";
+		header('location: login.php');
+	}
+	
+   }
+   
+   
+   if (isset($_POST['login'])){
+	   $username = mysqli_real_escape_string($db,$_POST['username']);
+	   $password = mysqli_real_escape_string($db,$_POST['password']);	
+	
+	
+	
+	if (empty($username)){
+		array_push($errors, "Username is required");
+	}
+	if (empty($password)){
+		array_push($errors, "Password is required");
+	}
+	
+	if (count($errors) == 0){
+		$password = md5($password);
+		$query = " SELECT * FROM account WHERE username='$username' AND password='$password'";
+		$result = mysqli_query($db, $query);
+		if (mysqli_num_rows($result) == 0){
+			
+			$_SESSION['username'] = $username;
+		    $_SESSION['success'] = "You are now logged in";
+		    header('location: index.php');
+		}else{
+			array_push($errors, "wrong username/password combination");
+			
+		}
+		
+		
+	}
+   }
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
    
    
    
    if(isset($_GET['logout'])){
 	   session_destroy();
 	   unset($SESSION['username']);
+<<<<<<< HEAD
 	   header('location: admin_login.php');
+=======
+	   header('location: login.php');
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 	   
 	   
 	   
 	   
    }
+<<<<<<< HEAD
 	
  	if (isset($_POST['login_user'])) {
 		$username = $_POST['username'];
@@ -94,4 +173,9 @@
 		}
 	}
 
+=======
+
+  
+	
+>>>>>>> ce1551d523a15c96845049e8d3f47a8301a6b18a
 ?>
