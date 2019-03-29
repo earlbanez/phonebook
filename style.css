@@ -1,135 +1,77 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url(csl.jpg);
-	background-size: cover;
-    background-position: center;
-    font-family: Copperplate Gothic Bold;
-	
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
 }
 
-.loginbox{
-    width: 320px;
-    height: 420px;
-    background: #fffff;
-    color: #000;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 100px 30px;
-	border-color: #57b316; 
-	margin-left: 400px;
+.middle{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-
-.avas{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
+.menu{
+	width: 300px;
+	border-radius: 8px;
+	overflow: hidden;
 }
-
-h1{
-    margin: 0;
-    padding-bottom: 30px;
-    text-align: center;
-    font-size: 25px;
+.item{
+	border-top: 1px solid # 2980b9;
+	overflow: hidden;
 }
-
-.loginbox input{
-    width: 100%;
-    margin-bottom: 20px;
+.btn{
+	display: block;
+	padding: 16px 20px;
+	background: #3498db;
+	color: white;
+	position: relative;
 }
-.loginbox input[type="text"], input[type="password"]
-{
-    border: 1px solid #696969;
-    background: transparent;
-    height: 40px;
-    color: #000;
-    font-size: 16px;
-	padding-left: 10px;
+.btn:before{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: #3498db;
+	left: 20px;
+	bottom: -7px;
+	transform: rotate(45deg);
 }
-.loginbox input[type="submit"]
-{
-    border: none;
-    height: 40px;
-    background: skyblue;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
-	padding-right: 4px;
-
+.btn i{
+	margin-right: 10px;	
 }
-.loginbox input[type="submit"]:hover
-{
-    cursor: pointer;
-    background: #90EE90;
-    color: #fff;
+.smenu{
+	background: #333;
+	overflow: hidden;
+	transition: max-height 0.3s;
+	max-height: 0;
 }
-.loginbox a{
-    text-decoration: none;
-    font-size: 13px;
-	font-style: Italic;
-	font-weight: bold;
-    line-height: 20px;
-    color: #000;
+.smenu a{
+	display: block;
+	padding: 16px 26px;
+	color: white;
+	font-size: 14px;
+	margin: 4px 0;
+	position: relative;
 }
-
-.loginbox a:hover
-{
-    color: #696969;
+.smenu a:before{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #3498db;
+	left: 0;
+	top: 0;
+	transition: 0.3s;
+	opacity: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.smenu a:hover:before{
+	opacity: 1;
+}
+.item:target .smenu{
+	max-height: 10em;
+}
 
 
 

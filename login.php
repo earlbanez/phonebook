@@ -1,65 +1,90 @@
-<<<<<<< HEAD
 <?php
-        require 'config.php';
+		
+       include('server.php');        
+?> 
 
-        
-        $username = $password = '';
-        $err = '';
-        if(isset($_POST['create'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        
-        $query = "select * from user where username = '$username' AND password = ('$password')";
-        $result = mysqli_query($con, $query);
-        $row = mysqli_fetch_array($result);
-        $count = mysqli_num_rows($result);
-        echo $count ;
-        if($count ==1 ) {
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['id'] = $row['id'];
-            header('location: index.php');
-        }else{
-            $err = 'Invalid Username/Password';
-        
-        if($result){
-            echo "<script>alert('unknown Username! Please Register!');</script>";
-        }
-            
-        }
-    }
-    mysqli_close($conn); 
-        
-        
-?>
-
-=======
->>>>>>> b49208c9807657788e786f2b71f38ceb54465597
 <html>
 <head>
 <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel = "stylesheet" href = "font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Bodoni MT;
+	background: #34495e;
+}
+.box{
+	padding: 40px;
+	background: #34495e;
+	text-align: center;
+
+}
+.box input[type = "text"],.box input[type = "password"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+	width: 280px;
+	border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+	background: #2ecc71;
+}
+.footer {
+   font-family:Bodoni MT;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #D7DBDD;
+   color: black;
+   text-align: center;
+}
+</style>
 </head>
 <body>
-	<div class="loginbox">
-    <img src="avas.png" class="avas">
-        <h1>Login Here</h1>
-<<<<<<< HEAD
-        <form action="index.php" method="post">
-            <input type="text" placeholder="Username" required autofocus>
-            <input type="password" placeholder="Password"required>
-			<input name="create"  class="btn btn-block btn-info" type="submit" id="create_btn" value="Login"/><br></a>
-=======
-        <form method="post" action="code.php">
-            <input type="text" placeholder="Username" required autofocus>
-            <input type="password" placeholder="Password"required>
-			<input type="submit" value="Login" class="button">
->>>>>>> b49208c9807657788e786f2b71f38ceb54465597
-			<u><center><a href="create_account.php">Create an Account</a></center></u>
+
+<div class="footer">
+  <p>&copyAll Right Reserved 2019
+	     <br>Republic of the Phlippines
+		 <br>Oroquieta City, Misamis Occidental
+  	 </p>
+</div>
+
+<?php include ('errors.php'); ?>
+
+	   <form class="box" action="server.php" method="post">
+		<h1>STAFF</h1>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password2" placeholder="Password"  required>
+            <input name="login_user"  class="btn btn-block btn-info" type="submit" value="Login"/>
+            <a href="start.php" style="font-size:40px">BACK</a>
         </form>
-		
-		
         
-    </div>
-	
 </body>
 </html>
